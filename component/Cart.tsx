@@ -257,7 +257,7 @@ export default function Cart({ onClose, tableNumber, restaurantSlug, restaurantI
           {items?.length > 0 && (
             <button
               onClick={clearCart}
-              className="text-orange-500 hover:text-orange-600 font-medium"
+              className="text-primary hover:text-orange-600 font-medium"
             >
               {t(lang, 'clear_all')}
             </button>
@@ -270,7 +270,7 @@ export default function Cart({ onClose, tableNumber, restaurantSlug, restaurantI
           <div className="flex flex-col items-center justify-center py-16">
             {/* Empty cart illustration */}
             <div className="relative w-32 h-32 mb-6">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-orange-500/10 rounded-full animate-pulse" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/10 rounded-full animate-pulse" />
               <div className="absolute inset-4 bg-white rounded-full shadow-inner flex items-center justify-center">
                 <span className="text-5xl">🛒</span>
               </div>
@@ -439,7 +439,7 @@ export default function Cart({ onClose, tableNumber, restaurantSlug, restaurantI
                 
                 <div className={`flex justify-between items-center ${isRtl ? 'flex-row-reverse' : ''}`}>
                   <span className="text-gray-900 font-bold text-lg">{t(lang, 'total')}</span>
-                  <span className="text-2xl font-extrabold bg-gradient-to-r from-primary to-orange-500 bg-clip-text text-transparent">
+                  <span className="text-2xl font-extrabold bg-gradient-to-r from-primary to-primary bg-clip-text text-transparent">
                     {getTotal().toFixed(0)} DH
                   </span>
                 </div>
@@ -455,14 +455,14 @@ export default function Cart({ onClose, tableNumber, restaurantSlug, restaurantI
           <div className={`max-w-4xl mx-auto px-4 py-4 flex items-center justify-between gap-4 ${isRtl ? 'flex-row-reverse' : ''}`}>
             <div className={isRtl ? 'text-right' : ''}>
               <p className="text-xs text-gray-500 font-medium uppercase tracking-wide">{t(lang, 'total_payable')}</p>
-              <p className="text-2xl font-extrabold bg-gradient-to-r from-primary to-orange-500 bg-clip-text text-transparent">
+              <p className="text-2xl font-extrabold bg-gradient-to-r from-primary to-primary bg-clip-text text-transparent">
                 {getTotal().toFixed(0)} DH
               </p>
             </div>
             <button
               onClick={handlePlaceOrder}
               disabled={!tableNumber}
-              className="group relative overflow-hidden bg-gradient-to-r from-primary to-orange-500 hover:from-primary/90 hover:to-orange-500/90 disabled:from-gray-400 disabled:to-gray-500 disabled:cursor-not-allowed text-white font-bold py-3.5 px-8 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2 text-base shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 active:scale-[0.98]"
+              className="group relative overflow-hidden bg-gradient-to-r from-primary to-primary hover:from-primary/90 hover:to-primary/90 disabled:from-gray-400 disabled:to-gray-500 disabled:cursor-not-allowed text-white font-bold py-3.5 px-8 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2 text-base shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 active:scale-[0.98]"
             >
               <span className="relative z-10">
                 {t(lang, 'place_order')}
